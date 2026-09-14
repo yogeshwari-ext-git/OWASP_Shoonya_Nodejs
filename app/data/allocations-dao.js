@@ -15,7 +15,7 @@ const AllocationsDAO = function(db){
     const allocationsCol = db.collection("allocations");
     const userDAO = new UserDAO(db);
 
-    this.update = (userId, stocks, funds, bonds, callback) => {
+    //this.update = (userId, stocks, funds, bonds, callback) => {
         const parsedUserId = parseInt(userId);
 
         // Create allocations document
