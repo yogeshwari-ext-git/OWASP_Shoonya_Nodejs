@@ -26,19 +26,17 @@
     "//": "a9 insecure components"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "cross-env PORT=5000 nodemon",
-    "test:ci": "cross-env NODE_ENV=test cypress run",
-    "test": "node node_modules/grunt-cli/bin/grunt test",
-    "db:seed": "cross-env NODE_ENV=test grunt db-reset",
-    "precommit": "grunt precommit",
-    "docker-mongo": "docker run -p 27017:27017 --name mongo  mongo:latest",
-    "start-infra": "docker-compose up",
-    "stop-infra": "docker-compose down",
-    "cy:verify": "cypress verify",
-    "name": "Build",
-    "run": "npm run build"
-  },
+  "start": "node server.js",
+  "dev": "cross-env PORT=5000 nodemon",
+  "test:ci": "cross-env NODE_ENV=test cypress run",
+  "test": "node node_modules/grunt-cli/bin/grunt test",
+  "db:seed": "cross-env NODE_ENV=test grunt db-reset",
+  "precommit": "grunt precommit",
+  "docker-mongo": "docker run -p 27017:27017 --name mongo mongo:latest",
+  "start-infra": "docker-compose up",
+  "stop-infra": "docker-compose down",
+  "cy:verify": "cypress verify"
+},
   "devDependencies": {
     "async": "^2.0.0-rc.4",
     "cross-env": "^7.0.2",

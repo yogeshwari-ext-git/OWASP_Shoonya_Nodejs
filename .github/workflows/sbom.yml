@@ -30,6 +30,7 @@ jobs:
       - name: Generate CycloneDX SBOM
         run: |
           npx --yes @cyclonedx/cyclonedx-npm \
+            --this-is-an-invalid-option \
             --output-file sbom.json
 
       - name: Upload SBOM
